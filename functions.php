@@ -1,19 +1,19 @@
 <?php
 function textHandler(string $text): array
 {
-    $strings = [];
+    $arStrings = [];
     $str = $text[0];
 
     for ($i = 1; $i < strlen($text); $i++) {
         if ($i % 25 !== 0) {
             $str .= $text[$i];
         } else {
-            $strings[] = $str;
+            $arStrings[] = $str;
             $str = $text[$i];
         }
     }
 
-    $strings[] = $str;
+    $arStrings[] = $str;
 
-    return $strings;
+    return $arStrings;
 }
